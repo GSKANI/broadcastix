@@ -5,6 +5,8 @@ import { prods } from './data';
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', company: '', email: '', phone: '', message: '' });
+  const [formStatus, setFormStatus] = useState({ loading: false, success: false, error: null, errors: [] });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,57 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (formStatus.error) setFormStatus({ ...formStatus, error: null, errors: [] });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormStatus({ loading: true, success: false, error: null, errors: [] });
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setFormStatus({
+          loading: false,
+          success: false,
+          error: data.message || 'Failed to submit form',
+          errors: data.errors || []
+        });
+        return;
+      }
+
+      setFormStatus({
+        loading: false,
+        success: true,
+        error: null,
+        errors: []
+      });
+
+      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
+
+      setTimeout(() => {
+        setFormStatus({ loading: false, success: false, error: null, errors: [] });
+      }, 3000);
+    } catch (err) {
+      setFormStatus({
+        loading: false,
+        success: false,
+        error: 'Network error. Please try again or call us directly at +91 9003249933',
+        errors: []
+      });
+    }
+  };
 
   const featuredProds = prods.slice(0, 4);
 
@@ -234,7 +287,7 @@ function App() {
               <div className="c-item-icon">📞</div>
               <div className="c-item-text">
                 <h4>Call Us</h4>
-                <p>+91 98765 43210<br />Mon-Sat: 9am - 6:30pm</p>
+                <p>+91 9003249933<br />Mon-Sat: 9am - 6:30pm</p>
               </div>
             </div>
           </div>
@@ -243,17 +296,78 @@ function App() {
             <h3 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Request a Quote</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>Fill out the form below and we'll get back to you within 24 hours.</p>
 
-            <form className="c-form" onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll contact you soon."); }}>
+            {formStatus.success && (
+              <div style={{ background: '#d1fae5', color: '#065f46', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #6ee7b7' }}>
+                <strong>✓ Success!</strong> Your message has been sent. We'll contact you within 24 hours.
+              </div>
+            )}
+
+            {formStatus.error && (
+              <div style={{ background: '#fee2e2', color: '#991b1b', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #fca5a5' }}>
+                <strong>✗ Error:</strong> {formStatus.error}
+                {formStatus.errors.length > 0 && (
+                  <ul style={{ marginTop: '8px', marginLeft: '20px' }}>
+                    {formStatus.errors.map((err, idx) => (
+                      <li key={idx}>{err}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+
+            <form className="c-form" onSubmit={handleFormSubmit}>
               <div className="fc">
-                <input type="text" placeholder="Full Name *" required />
-                <input type="text" placeholder="Company / Station" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name *"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  minLength="2"
+                />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company / Station"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                />
               </div>
               <div className="fc">
-                <input type="email" placeholder="Email Address *" required />
-                <input type="tel" placeholder="Phone Number *" required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address *"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number (10+ digits) *"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
-              <textarea placeholder="Tell us about your requirements... *" required></textarea>
-              <button type="submit" className="btn-primary" style={{ padding: '16px 32px', fontSize: '1.1rem' }}>Send Message</button>
+              <textarea
+                name="message"
+                placeholder="Tell us about your requirements... *"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+                minLength="10"
+              ></textarea>
+              <button
+                type="submit"
+                className="btn-primary"
+                style={{ padding: '16px 32px', fontSize: '1.1rem', width: '100%' }}
+                disabled={formStatus.loading}
+              >
+                {formStatus.loading ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
         </div>
@@ -315,12 +429,12 @@ function App() {
       </footer>
 
       {/* FLOATING ACTION BUTTONS */}
-      <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="wa-float" title="Contact on WhatsApp">
+      <a href="https://wa.me/919003249933" target="_blank" rel="noreferrer" className="wa-float" title="Contact on WhatsApp">
         ✆
       </a>
 
       {/* MOBILE CALL BUTTON */}
-      <a href="tel:+91 90940 24982" className="call-float-mob">
+      <a href="tel:+91 9003249933" className="call-float-mob">
         <span>📞</span> Call Us Now
       </a>
 
