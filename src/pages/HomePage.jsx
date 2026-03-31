@@ -64,7 +64,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-container">
           <div>
-            <h1>Next-Gen Media Broadcasting Platform</h1>
+            <h1>FEELS LIKE A MEDIA-TECH PLATFORM</h1>
             <p>Cutting-edge technology meets professional broadcasting. Empower your content with AI-driven tools, cloud infrastructure, and enterprise-grade broadcasting solutions.</p>
             <div className="hero-btns">
               <a href="#featured" className="btn-white">Get Started</a>
