@@ -64,7 +64,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-container">
           <div>
-            <h1>Buy Premium Broadcast Media Equipment & Solutions</h1>
+            <h1>FEELS LIKE A MEDIA-TECH PLATFORM</h1>
             <p>Shop professional broadcast media products, cloud infrastructure, and streaming solutions. Everything you need to launch and scale your media business.</p>
             <div className="hero-btns">
               <a href="#featured" className="btn-white">Shop Now</a>
