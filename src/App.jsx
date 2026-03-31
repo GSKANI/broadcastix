@@ -38,8 +38,7 @@ function Navbar() {
       <nav className={`navbar ${isScrolled ? 'shadow-md' : ''}`}>
         <div className="container nav-container">
           <Link to="/" className="logo">
-            <div style={{ background: 'var(--primary)', color: '#fff', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }}>B</div>
-            <div>Broad<span>castix</span></div>
+            <img src="/BROADCASTIC LOGO.png" alt="Broadcastix" style={{ height: '120px', width: 'auto' }} />
           </Link>
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
@@ -73,8 +72,7 @@ function Navbar() {
       <div className={`mob-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mob-header">
           <Link to="/" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
-            <div style={{ background: 'var(--primary)', color: '#fff', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '6px' }}>B</div>
-            <div>Broad<span>castix</span></div>
+            <img src="/BROADCASTIC LOGO.png" alt="Broadcastix" style={{ height: '35px', width: 'auto' }} />
           </Link>
           <button className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>✕</button>
         </div>

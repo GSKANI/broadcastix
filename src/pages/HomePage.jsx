@@ -64,11 +64,11 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-container">
           <div>
-            <h1>FEELS LIKE A MEDIA-TECH PLATFORM</h1>
-            <p>Cutting-edge technology meets professional broadcasting. Empower your content with AI-driven tools, cloud infrastructure, and enterprise-grade broadcasting solutions.</p>
+            <h1>Buy Premium Broadcast Media Equipment & Solutions</h1>
+            <p>Shop professional broadcast media products, cloud infrastructure, and streaming solutions. Everything you need to launch and scale your media business.</p>
             <div className="hero-btns">
-              <a href="#featured" className="btn-white">Get Started</a>
-              <a href="#contact" className="btn-outline">Contact Us</a>
+              <a href="#featured" className="btn-white">Shop Now</a>
+              <a href="#contact" className="btn-outline">Get Quote</a>
             </div>
           </div>
           <div className="hero-img">
@@ -81,29 +81,29 @@ export default function HomePage() {
       <section className="py-section" id="services">
         <div className="container">
           <div className="sec-title">
-            <h2>Our Core Services</h2>
-            <p>End-to-end solutions for all your broadcasting and media production needs.</p>
+            <h2>Why Buy From Broadcastix</h2>
+            <p>Complete broadcast media solutions - Equipment, Installation, Support, and Expertise.</p>
           </div>
           <div className="services-grid">
             <div className="srv-card">
               <div className="srv-icon">🛒</div>
-              <h3>Equipment Sales</h3>
-              <p>Genuine, certified broadcast hardware, components, and spares from top brands.</p>
+              <h3>Shop Premium Equipment</h3>
+              <p>Genuine, certified broadcast hardware from top brands. Same-day to 48-hour delivery.</p>
             </div>
             <div className="srv-card">
               <div className="srv-icon">🔧</div>
-              <h3>Installation</h3>
-              <p>Professional studio setup, transmitter configuration, and integration by certified engineers.</p>
+              <h3>Professional Installation</h3>
+              <p>Expert setup and configuration. Get your broadcast station running perfectly in 48 hours.</p>
             </div>
             <div className="srv-card">
               <div className="srv-icon">⚙️</div>
-              <h3>Repair & Maintenance</h3>
-              <p>24/7 technical support, AMC contracts, and rapid hardware troubleshooting.</p>
+              <h3>Lifetime Support</h3>
+              <p>24/7 technical support, warranty, and maintenance. We keep your broadcast running.</p>
             </div>
             <div className="srv-card">
               <div className="srv-icon">💡</div>
-              <h3>Consulting</h3>
-              <p>Acoustic design, workflow optimisation, and regulatory compliance consulting.</p>
+              <h3>Expert Guidance</h3>
+              <p>Free consultation to design the perfect broadcast solution for your business.</p>
             </div>
           </div>
         </div>
@@ -113,8 +113,8 @@ export default function HomePage() {
       <section className="prods py-section" id="featured">
         <div className="container">
           <div className="sec-title">
-            <h2>Featured Products</h2>
-            <p>Industry-standard equipment available for immediate dispatch across India.</p>
+            <h2>Best-Selling Broadcast Media Products</h2>
+            <p>Professional equipment trusted by broadcasters across India. Order now with delivery and installation.</p>
           </div>
           <div className="prod-grid">
             {featuredProds.map(p => (
@@ -347,10 +347,9 @@ export default function HomePage() {
           <div className="ft-grid">
             <div>
               <div className="logo ft-logo">
-                <div style={{ background: 'var(--primary)', color: '#fff', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '6px', fontSize: '1.2rem' }}>B</div>
-                <div>Broad<span>castix</span></div>
+                <img src="/BROADCASTIC LOGO.png" alt="Broadcastix" style={{ height: '180px', width: 'auto' }} />
               </div>
-              <p className="ft-desc">India's trusted partner for modern broadcasting equipment, system integration, and uninterrupted media services.</p>
+              <p className="ft-desc">Buy premium broadcast media equipment, cameras, mixers, and streaming solutions. Your one-stop shop for professional broadcasting hardware and infrastructure.</p>
               <div className="ft-socials">
                 <a href="#" className="ft-so">FB</a>
                 <a href="#" className="ft-so">TW</a>
