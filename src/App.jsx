@@ -213,36 +213,36 @@ function App() {
           <div className="c-info-card">
             <h3>Get in Touch</h3>
             <p>Our experts are ready to assist you with sales, installation, or technical support.</p>
-            
+
             <div className="c-item">
               <div className="c-item-icon">📍</div>
               <div className="c-item-text">
                 <h4>Office Location</h4>
-                <p>No.14, Anna Salai,<br/>Chennai – 600002, TN, India</p>
+                <p>No.14, Anna Salai,<br />Chennai – 600002, TN, India</p>
               </div>
             </div>
-            
+
             <div className="c-item">
               <div className="c-item-icon">✉️</div>
               <div className="c-item-text">
                 <h4>Email Us</h4>
-                <p>sales@broadcastix.in<br/>support@broadcastix.in</p>
+                <p>sales@broadcastix.in<br />support@broadcastix.in</p>
               </div>
             </div>
-            
+
             <div className="c-item">
               <div className="c-item-icon">📞</div>
               <div className="c-item-text">
                 <h4>Call Us</h4>
-                <p>+91 98765 43210<br/>Mon-Sat: 9am - 6:30pm</p>
+                <p>+91 98765 43210<br />Mon-Sat: 9am - 6:30pm</p>
               </div>
             </div>
           </div>
-          
+
           <div>
             <h3 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Request a Quote</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>Fill out the form below and we'll get back to you within 24 hours.</p>
-            
+
             <form className="c-form" onSubmit={(e) => { e.preventDefault(); alert("Thanks! We'll contact you soon."); }}>
               <div className="fc">
                 <input type="text" placeholder="Full Name *" required />
@@ -276,7 +276,7 @@ function App() {
                 <a href="#" className="ft-so">YT</a>
               </div>
             </div>
-            
+
             <div className="ft-col">
               <h4>Company</h4>
               <ul>
@@ -286,7 +286,7 @@ function App() {
                 <li><a href="#">Careers</a></li>
               </ul>
             </div>
-            
+
             <div className="ft-col">
               <h4>Support</h4>
               <ul>
@@ -296,7 +296,7 @@ function App() {
                 <li><a href="#">AMC Portal</a></li>
               </ul>
             </div>
-            
+
             <div className="ft-col">
               <h4>Legal</h4>
               <ul>
@@ -307,7 +307,7 @@ function App() {
               </ul>
             </div>
           </div>
-          
+
           <div className="ft-bot">
             &copy; {new Date().getFullYear()} Broadcastix Solutions. All Rights Reserved. Designed for Professionals.
           </div>
@@ -318,9 +318,9 @@ function App() {
       <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="wa-float" title="Contact on WhatsApp">
         ✆
       </a>
-      
+
       {/* MOBILE CALL BUTTON */}
-      <a href="tel:+919876543210" className="call-float-mob">
+      <a href="tel:+91 90940 24982" className="call-float-mob">
         <span>📞</span> Call Us Now
       </a>
 
