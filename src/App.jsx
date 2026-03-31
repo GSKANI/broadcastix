@@ -4,6 +4,7 @@ import { prods } from './data';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,9 @@ function App() {
           <button className="btn-primary hd" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
             Get Quote
           </button>
-          <button className="mob-menu-btn">☰</button>
+          <button className="mob-menu-btn" onClick={() => setIsMobileMenuOpen(true)}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
         </div>
       </nav>
 
@@ -320,6 +323,28 @@ function App() {
       <a href="tel:+919876543210" className="call-float-mob">
         <span>📞</span> Call Us Now
       </a>
+
+      {/* MOBILE MENU DRAWER */}
+      <div className={`mob-overlay ${isMobileMenuOpen ? 'open' : ''}`} onClick={() => setIsMobileMenuOpen(false)}></div>
+      <div className={`mob-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="mob-header">
+          <div className="logo">
+            <div style={{ background: 'var(--primary)', color: '#fff', width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '6px' }}>B</div>
+            <div>Broad<span>castix</span></div>
+          </div>
+          <button className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>✕</button>
+        </div>
+        <div className="mob-links">
+          <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
+          <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+          <a href="#products" onClick={() => setIsMobileMenuOpen(false)}>Products</a>
+          <a href="#why-us" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+        </div>
+        <div className="mob-actions">
+          <button className="btn-primary" style={{ width: '100%', marginBottom: '16px' }} onClick={() => { setIsMobileMenuOpen(false); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }}>Get Quote</button>
+        </div>
+      </div>
 
     </>
   );
