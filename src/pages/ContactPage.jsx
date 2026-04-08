@@ -8,41 +8,26 @@ export default function ContactPage() {
     subject: '',
     message: ''
   });
-  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
+    const { name, email, phone, subject, message } = formData;
+    
     // Validate form
-    if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
-      setStatus({ type: 'error', message: 'All fields are required' });
+    if (!name || !email || !phone || !subject || !message) {
+      alert('All fields are required');
       return;
     }
 
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+    const whatsappMessage = `*MISD Contact Form*%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0ASubject: ${encodeURIComponent(subject)}%0AMessage: ${encodeURIComponent(message)}`;
 
-      const data = await response.json();
-
-      if (response.ok) {
-        setStatus({ type: 'success', message: data.message });
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        setTimeout(() => setStatus({ type: '', message: '' }), 3000);
-      } else {
-        setStatus({ type: 'error', message: data.message || 'Error sending message' });
-      }
-    } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to connect to server' });
-    }
+    window.location.href = `https://wa.me/9884106929?text=${whatsappMessage}`;
   };
 
   return (
@@ -139,19 +124,6 @@ export default function ContactPage() {
           <div style={{ background: '#fff', padding: '30px', borderRadius: '12px', border: '1px solid var(--border)' }}>
             <h2 style={{ marginBottom: '24px' }}>Send us a Message</h2>
 
-            {status.message && (
-              <div style={{
-                padding: '12px 16px',
-                borderRadius: '6px',
-                marginBottom: '20px',
-                background: status.type === 'success' ? '#d1fae5' : '#fee2e2',
-                color: status.type === 'success' ? '#065f46' : '#991b1b',
-                border: `1px solid ${status.type === 'success' ? '#6ee7b7' : '#fca5a5'}`
-              }}>
-                {status.message}
-              </div>
-            )}
-
             <form onSubmit={handleSubmit}>
               {[
                 { name: 'name', label: 'Full Name', type: 'text' },
@@ -201,9 +173,10 @@ export default function ContactPage() {
               <button
                 type="submit"
                 className="btn-primary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', display: 'flex', gap: '8px', justifyContent: 'center', padding: '16px 32px', fontSize: '1.1rem' }}
               >
-                Send Message
+                <div style={{ fontSize: '1.4rem' }}>💬</div>
+                Send via WhatsApp
               </button>
             </form>
           </div>
