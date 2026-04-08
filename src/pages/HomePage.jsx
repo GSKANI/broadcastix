@@ -11,49 +11,17 @@ export default function HomePage() {
     if (formStatus.error) setFormStatus({ ...formStatus, error: null, errors: [] });
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    setFormStatus({ loading: true, success: false, error: null, errors: [] });
 
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+    const { name, email, message } = formData;
 
-      const data = await response.json();
+    // Structure the WhatsApp message formatting
+    // (%0A is the code for creating a line break)
+    const whatsappMessage = `*MISD Contact Form*%0A%0AName: ${encodeURIComponent(name)}%0AContact: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
 
-      if (!response.ok) {
-        setFormStatus({
-          loading: false,
-          success: false,
-          error: data.message || 'Failed to submit form',
-          errors: data.errors || []
-        });
-        return;
-      }
-
-      setFormStatus({
-        loading: false,
-        success: true,
-        error: null,
-        errors: []
-      });
-
-      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
-
-      setTimeout(() => {
-        setFormStatus({ loading: false, success: false, error: null, errors: [] });
-      }, 3000);
-    } catch (err) {
-      setFormStatus({
-        loading: false,
-        success: false,
-        error: 'Network error. Please try again or call us directly at +91 9003249933',
-        errors: []
-      });
-    }
+    // Immediately redirect the user to WhatsApp with the pre-filled message attached
+    window.location.href = `https://wa.me/9884106929?text=${whatsappMessage}`;
   };
 
   const featuredProds = prods.slice(0, 4);
