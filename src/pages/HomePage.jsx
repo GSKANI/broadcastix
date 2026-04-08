@@ -3,12 +3,10 @@ import { prods } from '../data';
 
 export default function HomePage() {
   const [formData, setFormData] = useState({ name: '', company: '', email: '', phone: '', message: '' });
-  const [formStatus, setFormStatus] = useState({ loading: false, success: false, error: null, errors: [] });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    if (formStatus.error) setFormStatus({ ...formStatus, error: null, errors: [] });
   };
 
   const handleFormSubmit = (e) => {
@@ -232,25 +230,6 @@ export default function HomePage() {
             <h3 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Request a Quote</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>Fill out the form below and we'll get back to you within 24 hours.</p>
 
-            {formStatus.success && (
-              <div style={{ background: '#d1fae5', color: '#065f46', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #6ee7b7' }}>
-                <strong>✓ Success!</strong> Your message has been sent. We'll contact you within 24 hours.
-              </div>
-            )}
-
-            {formStatus.error && (
-              <div style={{ background: '#fee2e2', color: '#991b1b', padding: '16px', borderRadius: '8px', marginBottom: '20px', border: '1px solid #fca5a5' }}>
-                <strong>✗ Error:</strong> {formStatus.error}
-                {formStatus.errors.length > 0 && (
-                  <ul style={{ marginTop: '8px', marginLeft: '20px' }}>
-                    {formStatus.errors.map((err, idx) => (
-                      <li key={idx}>{err}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            )}
-
             <form className="c-form" onSubmit={handleFormSubmit}>
               <div className="fc">
                 <input
@@ -299,10 +278,10 @@ export default function HomePage() {
               <button
                 type="submit"
                 className="btn-primary"
-                style={{ padding: '16px 32px', fontSize: '1.1rem', width: '100%' }}
-                disabled={formStatus.loading}
+                style={{ padding: '16px 32px', fontSize: '1.1rem', width: '100%', display: 'flex', gap: '8px', justifyContent: 'center' }}
               >
-                {formStatus.loading ? 'Sending...' : 'Send Message'}
+                <div style={{ fontSize: '1.4rem' }}>💬</div>
+                Send via WhatsApp
               </button>
             </form>
           </div>
