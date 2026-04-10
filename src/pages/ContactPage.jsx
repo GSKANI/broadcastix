@@ -40,8 +40,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="container" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+      <div className="container" style={{ paddingTop: 'clamp(40px, 8vw, 60px)', paddingBottom: 'clamp(40px, 8vw, 60px)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: 'clamp(30px, 6vw, 40px)' }}>
           {/* Contact Info */}
           <div>
             <h2 style={{ marginBottom: '30px' }}>Contact Information</h2>
@@ -121,8 +121,8 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div style={{ background: '#fff', padding: '30px', borderRadius: '12px', border: '1px solid var(--border)' }}>
-            <h2 style={{ marginBottom: '24px' }}>Send us a Message</h2>
+          <div style={{ background: '#fff', padding: 'clamp(20px, 5vw, 30px)', borderRadius: '12px', border: '1px solid var(--border)' }}>
+            <h2 style={{ marginBottom: 'clamp(16px, 4vw, 24px)' }}>Send us a Message</h2>
 
             <form onSubmit={handleSubmit}>
               {[
@@ -183,10 +183,10 @@ export default function ContactPage() {
         </div>
 
         {/* FAQ Section */}
-        <div style={{ marginTop: '80px', paddingTop: '40px', borderTop: '2px solid var(--border)' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Frequently Asked Questions</h2>
+        <div style={{ marginTop: 'clamp(40px, 8vw, 80px)', paddingTop: 'clamp(20px, 5vw, 40px)', borderTop: '2px solid var(--border)' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'clamp(24px, 6vw, 40px)' }}>Frequently Asked Questions</h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '20px' }}>
             {[
               {
                 q: 'What is your typical response time?',
