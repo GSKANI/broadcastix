@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#CD0000",
+                    "primary": "#CD0000",
+                    "secondary": "#8B004A",
+                    "tertiary": "#8B004A",
+                    "background": "#EFEDE6",
+                    "surface": "#EFEDE6",
+                    "on-surface": "#1c1c17",
+                    "surface-container": "#e5e3db",
+                    "surface-container-low": "#ebe9e1",
+                    "surface-container-high": "#e1dfd7",
+                    "on-surface-variant": "#574147",
+                    "outline": "#8a7077",
+                    "outline-variant": "#ddbfc6",
+                    "primary-container": "#8B004A",
+                    "on-primary-container": "#ffffff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-primary {
+            background: linear-gradient(135deg, #CD0000 0%, #8B004A 100%);
+        }
+        .font-newsreader { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-red-200">
+<!-- TopNavBar -->
+<nav class="bg-[#EFEDE6]/70 dark:bg-stone-900/70 backdrop-blur-xl border-b border-stone-400/15 fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black font-newsreader text-stone-900 dark:text-stone-100 uppercase tracking-tighter">
+            BROADCASTIX
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300 text-sm uppercase tracking-widest" href="index.html">Solutions</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300 text-sm uppercase tracking-widest" href="equipment.html">Equipment</a>
+<a class="text-[#CD0000] border-b-2 border-[#CD0000] pb-1 font-medium text-sm uppercase tracking-widest" href="services.html">Services</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300 text-sm uppercase tracking-widest" href="blog.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300 text-sm uppercase tracking-widest" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#CD0000] scale-95 active:scale-90 transition-transform" data-icon="shopping_cart">shopping_cart</button>
+</div>
+<div class="hidden sm:flex gap-3">
+<button class="font-medium px-4 py-2 text-stone-600 border border-stone-400/30 hover:text-[#CD0000] transition-all rounded-lg text-xs uppercase tracking-widest">Login</button>
+<button class="font-medium px-4 py-2 gradient-primary text-white shadow-lg hover:opacity-90 transition-all rounded-lg scale-95 active:scale-90 text-xs uppercase tracking-widest">Get Quote</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="bg-[#8B004A] relative overflow-hidden py-24 md:py-32">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8pvxtREqy5cyCUCLbET3ySfylXfKzyBVrZSwe8OcdkCr_MDW-4FcdLVjcSxEyPtGaU_fxypvOfP3Wvrp-1Wpj9nph9ESmOEySxLR0oa4GumB-7qjKXaaxfkp0_eJqJkCQfPVQWd87tXyWgfqqP9IQVtTRy9SF7ecYtQnGDTpfXB6lNocfAH7k8SeYLYGzd8rHAqGQfV9f3U_2sGIPrFVK23uco9CZ0QtrKRgoeSazEMAABhBh5Y-2ELz2nqjeCApZSSxNpNF80bs'); background-size: cover;"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<div class="inline-block px-3 py-1 rounded bg-white/10 text-white font-headline text-sm font-bold tracking-widest uppercase">Expertise &amp; Excellence</div>
+<h1 class="text-white font-headline font-black text-5xl md:text-7xl leading-[1.1] tracking-tighter italic">
+                Complete <br/>Broadcast <br/>Solutions
+            </h1>
+<p class="text-white/80 font-body text-lg max-w-xl leading-relaxed">
+                Precision-engineered workflows from signal capture to global distribution. We curate the technology that powers the world's most demanding networks.
+            </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-white text-[#CD0000] font-headline font-bold px-8 py-4 rounded-lg flex items-center gap-2 hover:bg-[#EFEDE6] transition-all">
+                    View Roadmap <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex-1 w-full flex justify-end">
+<div class="relative w-full aspect-video md:aspect-square bg-black/20 rounded-full flex items-center justify-center p-8 border border-white/10">
+<img alt="broadcast console" class="w-full h-full object-cover rounded-full shadow-2xl border-4 border-white/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi1zvZNNHJKdxk9fBL00HwsAI2sKASHDbMGa1sl_mIxxNXZG0FhPHOijEpQ3I_RFJt_RHnjH7onqPTwhB43RVkWJ-jxvD6xUUxNfRfp0ehTaAoEp87YEVqShcSJezs4RrBV5gVcBsm1Bj3zc6BSJHfHzDRcCjJCGHc7kCRE3s8bZLRsw_CPI0o7iOukXs0ti0UP1VcH3a43Kloj0_2ITV4CAgEMF6MqRlPhJRRK-LDLq4M6G36J5eKN88skAzB3W0-EpSuBh40arE"/>
+<div class="absolute -bottom-4 -left-4 glass-card p-6 rounded-xl border border-white/20 shadow-xl hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#CD0000] flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<div>
+<p class="text-[#8B004A] font-headline font-bold text-sm">LIVE FEED ACTIVE</p>
+<p class="text-on-surface-variant text-xs">Latency: 1.2ms (Optimized)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-[#EFEDE6] px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline font-black text-4xl text-[#CD0000] tracking-tighter mb-4 uppercase italic">ENGINEERING PRECISION</h2>
+<p class="text-on-surface-variant text-lg">Our services are built on the 'Digital Curator' philosophy—intentional, precise, and authoritative. We don't just sell equipment; we craft ecosystems.</p>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-stone-300 text-8xl leading-none">01</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Equipment Sales</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Access to exclusive tiers of broadcast hardware including 8K cameras, zero-latency switches, and military-grade cabling.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Explore Catalog <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="construction">construction</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Expert Installation</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Our engineers handle the complex wiring and signal routing, ensuring your studio is operational from day one with perfect calibration.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Case Studies <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">24/7 Technical Support</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Direct access to lead engineers. We monitor your streams in real-time and provide immediate resolution for any transmission anomalies.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Contact Support <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Cloud Infrastructure</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Scalable cloud solutions for global content delivery networks with edge-computing for ultra-low latency playback.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Card 5 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="hub">hub</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Signal Management</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Proprietary routing algorithms to manage hundreds of simultaneous high-bandwidth feeds across diverse networks.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<!-- Card 6 -->
+<div class="glass-card p-10 rounded-xl flex flex-col h-full border border-stone-300/30 hover:border-[#CD0000]/20 transition-all group">
+<div class="w-14 h-14 rounded-lg gradient-primary flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="school">school</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-4">Team Training</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8 flex-grow">Intensive workshops for your operators to master the latest broadcast standards and equipment protocols.</p>
+<a class="text-[#CD0000] font-headline font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-stone-200/50 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline font-black text-4xl text-[#CD0000] tracking-tighter mb-4 uppercase italic">Operational Tiers</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Scalable solutions designed for local creators up to multinational media conglomerates.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- Starter Card -->
+<div class="bg-white p-10 rounded-xl flex flex-col border border-stone-300/30 shadow-sm hover:shadow-md transition-shadow">
+<div class="mb-8">
+<span class="font-headline font-bold text-[#8B004A] uppercase tracking-widest text-sm">Entry Level</span>
+<h3 class="font-headline font-black text-3xl text-on-surface mt-2 uppercase italic">Starter</h3>
+</div>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="font-headline font-black text-5xl text-[#CD0000]">$1,299</span>
+<span class="text-on-surface-variant font-body">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#CD0000] text-xl" data-icon="check_circle">check_circle</span>
+                        2 Concurrent HD Streams
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#CD0000] text-xl" data-icon="check_circle">check_circle</span>
+                        Standard 12/5 Support
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#CD0000] text-xl" data-icon="check_circle">check_circle</span>
+                        Remote Installation Aid
+                    </li>
+</ul>
+<button class="w-full py-4 px-6 border border-[#CD0000] text-[#CD0000] font-headline font-bold rounded-lg hover:bg-red-50 transition-all">Begin Integration</button>
+</div>
+<!-- Professional Card (Featured) -->
+<div class="bg-white p-10 rounded-xl flex flex-col border-2 border-[#8B004A] shadow-2xl relative scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CD0000] text-white font-headline font-black text-xs px-6 py-2 rounded-full tracking-[0.2em] uppercase shadow-lg">
+                    Most Selected
+                </div>
+<div class="mb-8">
+<span class="font-headline font-bold text-[#8B004A] uppercase tracking-widest text-sm">Market Leader</span>
+<h3 class="font-headline font-black text-3xl text-on-surface mt-2 uppercase italic">Professional</h3>
+</div>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="font-headline font-black text-6xl text-[#CD0000]">$4,950</span>
+<span class="text-on-surface-variant font-body">/mo</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-[#8B004A] text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Unlimited 4K Streams
+                    </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-[#8B004A] text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Priority 24/7 Support
+                    </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-[#8B004A] text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        On-Site Hardware Audit
+                    </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-[#8B004A] text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Dedicated Success Manager
+                    </li>
+</ul>
+<button class="w-full py-4 px-6 gradient-primary text-white font-headline font-bold rounded-lg shadow-lg hover:opacity-90 transition-all scale-95 active:scale-90">Full Deployment</button>
+</div>
+<!-- Enterprise Card -->
+<div class="bg-white p-10 rounded-xl flex flex-col border border-stone-300/30 shadow-sm hover:shadow-md transition-shadow">
+<div class="mb-8">
+<span class="font-headline font-bold text-[#8B004A] uppercase tracking-widest text-sm">Global Scale</span>
+<h3 class="font-headline font-black text-3xl text-on-surface mt-2 uppercase italic">Enterprise</h3>
+</div>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="font-headline font-black text-5xl text-[#CD0000]">Custom</span>
+</div>
+<p class="text-on-surface-variant mb-10 font-body leading-relaxed">For networks requiring custom satellite integration, global CDN orchestration, and multi-redundant failover systems.</p>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#CD0000] text-xl" data-icon="check_circle">check_circle</span>
+                        Unlimited 8K Transmission
+                    </li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[#CD0000] text-xl" data-icon="check_circle">check_circle</span>
+                        Global Edge Computing
+                    </li>
+</ul>
+<button class="w-full py-4 px-6 border border-[#CD0000] text-[#CD0000] font-headline font-bold rounded-lg hover:bg-red-50 transition-all">Consult Our Experts</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Well -->
+<section class="py-24 px-8 bg-[#EFEDE6]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="bg-white p-8 rounded-xl font-mono text-sm text-stone-600 relative overflow-hidden border border-stone-300/30 shadow-inner">
+<div class="flex gap-2 mb-6">
+<div class="w-3 h-3 rounded-full bg-[#CD0000]/40"></div>
+<div class="w-3 h-3 rounded-full bg-[#8B004A]/40"></div>
+<div class="w-3 h-3 rounded-full bg-stone-300"></div>
+</div>
+<pre class="whitespace-pre-wrap"><code>{
+  "system_status": "OPTIMAL",
+  "nodes": ["LND-01", "NYC-04", "TOK-02"],
+  "active_services": {
+    "latency_monitoring": "1.2ms",
+    "signal_integrity": "99.999%",
+    "active_encryption": "AES-256-GCM"
+  },
+  "provisioning": "COMPLETE"
+}</code></pre>
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-[#CD0000]/10 text-6xl" data-icon="terminal">terminal</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<h2 class="font-headline font-black text-4xl text-[#CD0000] tracking-tighter uppercase italic">Technically superior. <br/>Always online.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Our infrastructure uses automated provisioning and real-time observability to ensure your broadcast never misses a frame. We handle the code, so you can focus on the content.</p>
+<div class="flex gap-12 pt-4">
+<div>
+<p class="font-headline font-black text-3xl text-[#CD0000]">99.999%</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Uptime SLA</p>
+</div>
+<div>
+<p class="font-headline font-black text-3xl text-[#CD0000]">&lt; 50ms</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Global Latency</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#EFEDE6] dark:bg-stone-950 w-full py-12 px-8 border-t border-stone-400/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200 font-headline uppercase tracking-tighter italic">BROADCASTIX</div>
+<p class="text-[#8B004A] font-['Manrope'] uppercase tracking-widest text-[10px] font-bold">The Modern Curator</p>
+</div>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300 font-['Manrope'] uppercase tracking-widest text-xs opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300 font-['Manrope'] uppercase tracking-widest text-xs opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300 font-['Manrope'] uppercase tracking-widest text-xs opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300 font-['Manrope'] uppercase tracking-widest text-xs opacity-80 hover:opacity-100" href="#">Press Kit</a>
+</div>
+<div class="text-stone-500 dark:text-stone-500 font-['Manrope'] uppercase tracking-widest text-[10px] md:text-right">
+            © 2024 Broadcastix Media. All rights reserved.
+        </div>
+</div>
+</footer>
+</body></html>

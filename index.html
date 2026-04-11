@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&amp;family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "surface-tint": "#CD0000",
+                        "primary": "#CD0000",
+                        "secondary": "#8B004A",
+                        "tertiary": "#8B004A",
+                        "background": "#EFEDE6",
+                        "surface": "#EFEDE6",
+                        "on-surface": "#1c1c17",
+                        "surface-container": "#E5E3DB",
+                        "surface-container-low": "#EBE9E1",
+                        "surface-container-lowest": "#F5F3ED",
+                        "surface-variant": "#E5E2DA",
+                        "on-surface-variant": "#574147",
+                        "outline": "#8a7077",
+                        "outline-variant": "#D1CFCA",
+                        "primary-container": "#CD0000",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#ffffff"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                },
+                "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                }
+              },
+            },
+          }
+        </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-y-minor { transform: rotateY(-5deg) rotateX(5deg); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+        }
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20 selection:text-primary">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#EFEDE6]/70 dark:bg-stone-900/70 backdrop-blur-xl border-b border-stone-400/15">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <div class="text-2xl font-black font-['Newsreader'] text-stone-900 dark:text-stone-100 tracking-tighter uppercase">
+                BROADCASTIX
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-['Newsreader'] italic tracking-tight text-[#CD0000] border-b-2 border-[#CD0000] pb-1 transition-colors duration-300" href="index.html">Solutions</a>
+                <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="equipment.html">Equipment</a>
+                <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="services.html">Services</a>
+                <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="blog.html">About</a>
+                <a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="contact.html">Contact</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="material-symbols-outlined text-on-surface hover:text-[#CD0000] transition-colors">shopping_cart</button>
+                <div class="flex gap-4 items-center">
+                    <button class="px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#CD0000] hover:bg-[#CD0000]/5 transition-all">Login</button>
+                    <button class="px-6 py-2 bg-[#CD0000] text-white rounded-lg font-bold uppercase tracking-widest text-sm scale-95 active:scale-90 transition-transform">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="px-8 py-16 md:py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#CD0000]/10 text-[#CD0000] rounded-full text-xs font-bold tracking-[0.2em] uppercase">
+                    <span class="material-symbols-outlined text-[14px]">settings_input_antenna</span> Engineering Excellence
+                </div>
+                <h1 class="font-headline text-5xl md:text-7xl font-bold leading-[1.1] text-on-surface tracking-tight italic">
+                    Professional <span class="text-[#CD0000] not-italic">Broadcast</span> Equipment &amp; Solutions
+                </h1>
+                <p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Elevate your signal with MNC-grade hardware and custom integration. From high-power FM transmitters to complete studio ecosystems, we curate the future of sound and vision.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <button class="px-8 py-4 bg-[#CD0000] text-white rounded-lg font-bold uppercase tracking-widest text-sm flex items-center gap-2 hover:bg-[#8B004A] transition-all">
+                        Explore Catalog <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button class="px-8 py-4 border border-outline/30 text-[#CD0000] rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-surface-container-low transition-all">
+                        Technical Specs
+                    </button>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative perspective-1000">
+                <div class="w-full aspect-square bg-surface-container-low rounded-[2rem] rotate-y-minor overflow-hidden border border-outline-variant/20 shadow-2xl flex items-center justify-center">
+                    <img class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="3D rendered isometric broadcast tower on a minimalist platform with warm studio lighting and floating technical data points" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC7Cnd8cKl7BJ15wSGEHy-O_OgZjgOYZnuT2Vpe0eJ4aP2vLqvVUJZY2zjjnK_KHDMWejq4Z-nPttmdk_06Ob0Jp3Ju5ykLGV-nonzmMH1Dg1Cy6qa1KFdY1uWFIWoLmEpGo2wZ9fRM9uJvjOqZ-LGxwr1813v9S0qw2LPtG3lrEHUvC6htw2Oj9ebrBAL7BvMjmdhP3xtQq38jh4QCTNBWtRE1GWUAoJc82KHiv-Wy4qeabuzOOXzL5OLYNnFBK-RaXNxckBbdO4"/>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-[#CD0000]/10 to-transparent"></div>
+                    <div class="absolute bottom-8 right-8 bg-surface-container-lowest/80 backdrop-blur-md p-6 rounded-xl border border-white/40">
+                        <div class="text-xs font-bold uppercase tracking-widest text-[#CD0000] mb-2">Live Status</div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="font-headline italic font-bold text-xl">99.9% UPTIME</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats Strip -->
+        <section class="bg-surface-container-low border-y border-outline-variant/30">
+            <div class="max-w-7xl mx-auto px-8 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-headline font-black text-[#CD0000]">500+</div>
+                    <div class="text-xs uppercase font-bold tracking-widest text-on-surface-variant mt-1">Transmitters Installed</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-headline font-black text-[#CD0000]">24/7</div>
+                    <div class="text-xs uppercase font-bold tracking-widest text-on-surface-variant mt-1">Technical Support</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-headline font-black text-[#CD0000]">42</div>
+                    <div class="text-xs uppercase font-bold tracking-widest text-on-surface-variant mt-1">Global Markets</div>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="text-4xl font-headline font-black text-[#CD0000]">15yr</div>
+                    <div class="text-xs uppercase font-bold tracking-widest text-on-surface-variant mt-1">Engineering Heritage</div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Buy Section -->
+        <section class="px-8 py-24 max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="font-headline text-4xl font-bold tracking-tight italic">The Broadcastix Advantage</h2>
+                <div class="h-1 w-20 bg-[#CD0000] mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:scale-[1.02] transition-transform duration-300 group">
+                    <span class="material-symbols-outlined text-4xl text-[#CD0000] mb-6 block group-hover:scale-110 transition-transform">precision_manufacturing</span>
+                    <h3 class="font-headline italic font-bold text-xl mb-3">Precision Build</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Aerospace-grade components designed for zero-failure performance in extreme climates.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:scale-[1.02] transition-transform duration-300 group">
+                    <span class="material-symbols-outlined text-4xl text-[#CD0000] mb-6 block group-hover:scale-110 transition-transform">cloud_sync</span>
+                    <h3 class="font-headline italic font-bold text-xl mb-3">Cloud Ready</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Remote monitoring and AI diagnostics built into every piece of modern equipment.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:scale-[1.02] transition-transform duration-300 group">
+                    <span class="material-symbols-outlined text-4xl text-[#CD0000] mb-6 block group-hover:scale-110 transition-transform">support_agent</span>
+                    <h3 class="font-headline italic font-bold text-xl mb-3">Expert Support</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Direct access to the engineers who designed your system, not a call center.</p>
+                </div>
+                <div class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:scale-[1.02] transition-transform duration-300 group">
+                    <span class="material-symbols-outlined text-4xl text-[#CD0000] mb-6 block group-hover:scale-110 transition-transform">verified</span>
+                    <h3 class="font-headline italic font-bold text-xl mb-3">Certified Quality</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Fully compliant with international FCC, ETSI, and ITU broadcasting standards.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Best-Sellers Section -->
+        <section class="bg-surface-container-low px-8 py-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-12">
+                    <div class="space-y-2">
+                        <h2 class="font-headline text-4xl font-bold tracking-tight italic">Best Sellers</h2>
+                        <p class="text-on-surface-variant">Our most requested high-performance solutions.</p>
+                    </div>
+                    <button class="text-[#CD0000] font-bold uppercase tracking-widest text-sm flex items-center gap-2 group">
+                        View All <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Product Card -->
+                    <div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all flex flex-col h-full perspective-1000 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern high-power FM transmitter module with digital display and cooling vents in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7S-gyTEv0LGMX6KbJHEeP8qNuKwJt49eljmIHBzE5clCvb7sNGtqltio5KS1xjvJro9udYmgYGRv5LnS1djHOM-s_8jQqnGK4gtPNc-GPYsQK8yp2IxPGVGFwvunMSo2mUtcG14pc9NU-sG1Xh1lkcEk5WUQ_cNjaANaYjL5WFRq8l1GgSVAggCkwpK6-ZC9YC6-BsqPr1QAzgrH1sVm1qU_EXxtisBwnjpSPNCgOXgUgQPlTFzHumNLGyb4GDBQwTd63mi33PA4"/>
+                            <div class="absolute top-2 left-2 px-2 py-1 bg-[#CD0000] text-white text-[10px] font-bold uppercase tracking-widest rounded">FM Series</div>
+                        </div>
+                        <h4 class="font-headline italic font-bold text-lg mb-1">TX-5000 Hybrid</h4>
+                        <p class="text-xs text-on-surface-variant mb-4 flex-grow">Dual-mode FM/Digital transmitter with optimized cooling.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-headline italic font-black text-xl text-[#CD0000]">$12,499</span>
+                            <button class="w-10 h-10 bg-[#CD0000]/10 text-[#CD0000] rounded-full flex items-center justify-center hover:bg-[#CD0000] hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all flex flex-col h-full perspective-1000 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional studio mixing console with motorized faders and illuminated buttons in a darkened broadcast room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiIkWbCJIwJWCe-8we-_cyFOipQno6D463QFfRFmhCIAtBwHqRvoxuC2WKLLphYzdQvXfgQu7bA2qrB7HxVxPXG6by15NPrMKRkQ0hhNBDpYbdeUviUch2ula1zI8wT9rc-0XuIvskt7GHUnIwaXYjMZyiqWyB7RlbNcSPrxYtpb8ncv0dQ0wFZq9IXPm14WeVhFLcEv62G5bUP2y-P1Tn1pJzkZW7wKPJWOX8oIzLzVwX9Dn36keSds_DjFDvjmFdmpHosX5Fi4g"/>
+                            <div class="absolute top-2 left-2 px-2 py-1 bg-[#CD0000] text-white text-[10px] font-bold uppercase tracking-widest rounded">Studio</div>
+                        </div>
+                        <h4 class="font-headline italic font-bold text-lg mb-1">OmniConsole Pro</h4>
+                        <p class="text-xs text-on-surface-variant mb-4 flex-grow">IP-based mixing surface with 24-fader configuration.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-headline italic font-black text-xl text-[#CD0000]">$8,900</span>
+                            <button class="w-10 h-10 bg-[#CD0000]/10 text-[#CD0000] rounded-full flex items-center justify-center hover:bg-[#CD0000] hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all flex flex-col h-full perspective-1000 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Professional large diaphragm condenser microphone with shock mount in a soundproof vocal booth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlH6rzHjU7o5uyyF_kjqrLd1NuuyTjvG5KbjgqAE97RMD6LN1bIj1QFVl4EyFHtB5rEgdJsrBtabT8OEQ0igz6jwxfcg3YTOnKORc3_WAZai9KgvhjAO37Y5Hho6CO5A-a8a9cM7Gr-qk5eJstkSvOfs_nBLmpV59VzJCYRhr8Pl53VgABvmsYmtvkiYA2IIllc3VAvB1XMy4z6RR0Uwh6Nj5_tSQ6ijmwpnA3yoJaSG41rDbaXNtzFrfXAkUG_N3lnnJA844f8O4"/>
+                            <div class="absolute top-2 left-2 px-2 py-1 bg-[#CD0000] text-white text-[10px] font-bold uppercase tracking-widest rounded">Audio</div>
+                        </div>
+                        <h4 class="font-headline italic font-bold text-lg mb-1">VoxMaster M1</h4>
+                        <p class="text-xs text-on-surface-variant mb-4 flex-grow">Ultra-low noise floor condenser for crystal clear voice.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-headline italic font-black text-xl text-[#CD0000]">$1,250</span>
+                            <button class="w-10 h-10 bg-[#CD0000]/10 text-[#CD0000] rounded-full flex items-center justify-center hover:bg-[#CD0000] hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-xl transition-all flex flex-col h-full perspective-1000 group">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Satellite dish array on a rooftop against a blue sky, representing telecommunications and broadcast solutions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmwLY_wUCFof0oKjwXpaiCZQFLd54BJ2IgSDnm1vqAXs3Js1Gd0cafPV4ImFfmKmaI7Jbmg9wgNpCE-zihmMZCv6kSMQhtFUUv-y93K3HgR8-buOeOIJ6EnECZP2TckyFYko3qyDkXkXb7rpXWRcMljxppL9M0f8g7-cvgtXsOGfdVK6z3KQ0pz7ih7U7Fi-oswYEKWUNN_OPJIEl0t5nUEfFAs5mfb1NDnXtPcJZC9o6VZsJgKLUZDOw9Pw14tM19VhDQUMIlMPk"/>
+                            <div class="absolute top-2 left-2 px-2 py-1 bg-[#CD0000] text-white text-[10px] font-bold uppercase tracking-widest rounded">Antenna</div>
+                        </div>
+                        <h4 class="font-headline italic font-bold text-lg mb-1">BroadPath S-Array</h4>
+                        <p class="text-xs text-on-surface-variant mb-4 flex-grow">Phase-coherent antenna array for wide-area coverage.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-headline italic font-black text-xl text-[#CD0000]">$5,600</span>
+                            <button class="w-10 h-10 bg-[#CD0000]/10 text-[#CD0000] rounded-full flex items-center justify-center hover:bg-[#CD0000] hover:text-white transition-all">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us: Split Layout -->
+        <section class="px-8 py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <div class="grid grid-cols-2 gap-8 mb-12">
+                    <div class="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/30">
+                        <div class="text-5xl font-headline font-black text-[#CD0000] italic mb-2">99.9%</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Uptime Guaranteed</div>
+                    </div>
+                    <div class="p-6 bg-[#8B004A] text-white rounded-2xl">
+                        <div class="text-5xl font-headline font-black italic mb-2">24h</div>
+                        <div class="text-xs font-bold uppercase tracking-widest opacity-80">On-Site Dispatch</div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-[#CD0000]/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[#CD0000]">check</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold mb-1">Turnkey Integration</h5>
+                            <p class="text-sm text-on-surface-variant">We don't just sell boxes. We design entire signal paths from microphone to mast.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-full bg-[#CD0000]/10 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-[#CD0000]">check</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold mb-1">Energy Efficiency</h5>
+                            <p class="text-sm text-on-surface-variant">Our latest TX series reduces power consumption by up to 35% compared to legacy gear.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-6">
+                <h2 class="font-headline text-4xl font-bold tracking-tight italic">Engineered for the Long Haul.</h2>
+                <p class="text-lg text-on-surface-variant leading-relaxed">
+                    In the world of broadcast, downtime is death. That's why every component in our ecosystem is stress-tested in our laboratory to withstand 50°C heat and 95% humidity.
+                </p>
+                <div class="aspect-video rounded-3xl overflow-hidden bg-surface-container shadow-2xl relative border-4 border-surface-container-low">
+                    <img class="w-full h-full object-cover" data-alt="Interior of a modern high-tech server room with glowing lights and structured cabling, reflecting precision engineering" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl93VtiChyhEWfC8EIyWH36iwVyD9WKoSmQdXEBRW1kywnpi1zLGPx6mwZSgIpRuLqoH4a01soFhYvduAeMN-cY7OwvQ3DXLP1fh7wpwMsDM9Q5jN4wb_S9SBhEXjR7OONY1__VIuASA2y-WqOtH6Te9jU9HKjmyeAHxqI_RB0c5EZxG-Etz1XAyw4sh2Y9RcqyB1rq6F7HTDxLQCLfAPfaw97avvtaZTAe7xCn4byh5ut-Qb4-rb_SPg-U30w2d0so96KYSNH3FQ"/>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="bg-surface py-24">
+            <div class="max-w-7xl mx-auto px-8 overflow-hidden">
+                <h2 class="font-headline text-3xl font-bold mb-16 text-center italic uppercase tracking-widest">Industry Voices</h2>
+                <div class="animate-scroll flex gap-8 whitespace-nowrap">
+                    <!-- Testimonial 1 -->
+                    <div class="inline-block w-[400px] shrink-0 bg-white p-8 rounded-xl border border-[#CD0000]/10 space-y-4">
+                        <div class="flex gap-1 text-[#CD0000]">
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface-variant italic whitespace-normal leading-relaxed">"The TX-5000 has been running flawlessly for 18 months. The spectral purity is the best I've seen in 30 years of engineering."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+                                <img class="w-full h-full object-cover" data-alt="Professional portrait of a male broadcast engineer in a studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGlQpGQisuTBH3S4UR7U8JNp_r3_JF5GdQe1Dxv7PoT8YFamJYK1veFAen3EZjOuKdYi7-XF_QbgtwRNtCps7CivU3neVxBT_GZFUZCmsDuJ2yQtbIxEEOu5SyJVm8UYPC5if5VjCUGdYNHp6jmrPCMQEwIO_DW5DfMp7YfPoS3qRSQ6ZJTQXAMwxQDtDc5tBX7wRBNzECfNBOK5L1tfIQD8BMDzxUS05Z2IKtq_ayYL-l4erJml5IgQtrv1obSFizgcRwPOwANTc"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Marcus Chen</div>
+                                <div class="text-xs text-on-surface-variant uppercase tracking-widest">CTO, Global Radio Network</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="inline-block w-[400px] shrink-0 bg-white p-8 rounded-xl border border-[#CD0000]/10 space-y-4">
+                        <div class="flex gap-1 text-[#CD0000]">
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-on-surface-variant italic whitespace-normal leading-relaxed">"The IP-based console migration was seamless. Broadcastix support was there at 3 AM to ensure our transition went live without a hitch."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+                                <img class="w-full h-full object-cover" data-alt="Portrait of a female technical director in a professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByU2ETzMeJ1FD_dfeoHHuZYOCyT6cDnwf9RMoXGFfmYCSvu71jZpZ55L9aEPE9Scm6hwZkNzZVo3EViCADZj6zo4i47ApBnCF32XFeALyYftjA5JMGANUZZJqX0BflL1HTYB2_wNoFkSRAPKfBdDV8vaQAd5qqrjKp64xq4nxZbCGWvwSO2UP5G1_Op0CIM2TSOtrTr9xcr9HR6RTAqjYPx6Dt1rlOcXWN2PWtEDHQhHijbBNkEyhxqAG0wWLjc2VKj4tWOuCZiNs"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Sarah Jenkins</div>
+                                <div class="text-xs text-on-surface-variant uppercase tracking-widest">Tech Director, Urban Media</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Banner -->
+        <section class="bg-[#8B004A] py-20 px-8">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold text-white tracking-tight italic">Ready to Modernize Your Broadcast Chain?</h2>
+                <p class="text-white/80 text-lg leading-relaxed">Get a complimentary technical audit and custom solution design from our senior engineering team.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-10 py-5 bg-[#EFEDE6] text-[#8B004A] rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-white transition-all scale-100 hover:scale-105 active:scale-95">Request Free Audit</button>
+                    <button class="px-10 py-5 border border-white/30 text-white rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-all">Speak to an Engineer</button>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Preview -->
+        <section class="px-8 py-24 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="md:col-span-1 space-y-6">
+                <h2 class="font-headline text-3xl font-bold italic">Contact Our Labs</h2>
+                <p class="text-on-surface-variant">Available for worldwide consultation and international shipping.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-[#CD0000]">location_on</span>
+                        <span class="text-sm">Broadcast Avenue, Silicon Valley, CA</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-[#CD0000]">call</span>
+                        <span class="text-sm">+1 (800) BROADCAST</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-[#CD0000]">mail</span>
+                        <span class="text-sm">solutions@broadcastix.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/30">
+                    <form class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Full Name</label>
+                            <input class="w-full bg-white border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-[#CD0000] transition-all p-3" type="text"/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Station / Company</label>
+                            <input class="w-full bg-white border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-[#CD0000] transition-all p-3" type="text"/>
+                        </div>
+                        <div class="sm:col-span-2 space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Tell us about your project</label>
+                            <textarea class="w-full bg-white border-0 border-b border-outline-variant/50 focus:ring-0 focus:border-[#CD0000] transition-all p-3" rows="4"></textarea>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <button class="w-full py-4 bg-[#CD0000] text-white font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[#8B004A] transition-all" type="submit">Send Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#EFEDE6] dark:bg-stone-950 w-full py-12 px-8 border-t border-stone-400/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="text-lg font-bold text-stone-800 dark:text-stone-200">BROADCASTIX</div>
+                <p class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 dark:text-stone-500 max-w-sm">
+                    Pioneering precision broadcast technology since 2009. We build the infrastructure that connects voices to worlds.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-['Manrope'] uppercase tracking-widest text-xs text-[#8B004A] font-bold hover:text-[#CD0000] transition-all duration-300" href="#">Privacy Policy</a>
+                <a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Terms of Service</a>
+                <a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Contact</a>
+                <a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 dark:text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Press Kit</a>
+            </div>
+            <div class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 dark:text-stone-500">
+                © 2024 Broadcastix Media. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

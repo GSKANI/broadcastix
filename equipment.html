@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BROADCASTIX | High-Performance Equipment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#CD0000",
+                        "primary": "#CD0000",
+                        "secondary": "#8B004A",
+                        "tertiary": "#8B004A",
+                        "background": "#EFEDE6",
+                        "surface": "#EFEDE6",
+                        "on-surface": "#1C1C17",
+                        "on-background": "#1C1C17",
+                        "surface-container": "#E5E3DB",
+                        "surface-container-low": "#EBE9E1",
+                        "surface-container-lowest": "#FFFFFF",
+                        "outline": "#85827A",
+                        "outline-variant": "#C9C7BF",
+                        "on-primary": "#FFFFFF",
+                        "primary-container": "#CD0000",
+                        "on-primary-container": "#FFFFFF"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-container {
+            perspective: 1000px;
+        }
+        .tilt-card:hover {
+            transform: translateY(-4px);
+        }
+        .glass-blur {
+            backdrop-filter: blur(12px);
+            background: rgba(239, 237, 230, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-[#EFEDE6] text-stone-900 font-body selection:bg-primary/20 selection:text-primary">
+<!-- TopNavBar from COMPONENTS_9 -->
+<nav class="fixed top-0 w-full z-50 bg-[#EFEDE6]/70 dark:bg-stone-900/70 backdrop-blur-xl border-b border-stone-400/15">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-black font-['Newsreader'] text-stone-900 dark:text-stone-100 tracking-tighter">
+                BROADCASTIX
+            </div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="index.html">Solutions</a>
+<a class="text-[#CD0000] border-b-2 border-[#CD0000] pb-1 font-medium" href="equipment.html">Equipment</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="services.html">Services</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="blog.html">About</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="p-2 text-stone-900 hover:text-[#CD0000] transition-all duration-300 scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#CD0000] transition-colors duration-300">Login</button>
+<button class="bg-[#CD0000] text-white px-6 py-2.5 rounded-lg font-headline italic font-bold text-sm tracking-tight transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-[#CD0000]/10">
+                    Get Quote
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-[1600px] mx-auto">
+<header class="mb-16">
+<h1 class="font-headline text-8xl italic font-black text-stone-900 tracking-tighter mb-4">EQUIPMENT</h1>
+<p class="text-stone-600 font-body text-xl max-w-2xl leading-relaxed">
+                Precision-engineered hardware for mission-critical broadcast environments. Curated for reliability and technical mastery.
+            </p>
+</header>
+<section class="mb-12 glass-blur sticky top-24 z-40 py-6 border-b border-stone-400/15">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="flex flex-wrap items-center gap-3">
+<button class="px-6 py-2 rounded-full font-headline italic font-bold text-sm tracking-tight bg-[#8B004A] text-white transition-all shadow-lg shadow-[#8B004A]/10">ALL ASSETS</button>
+<button class="px-6 py-2 rounded-full font-headline italic font-bold text-sm tracking-tight bg-white border border-stone-200 text-stone-600 hover:text-[#CD0000] transition-all">VIDEO</button>
+<button class="px-6 py-2 rounded-full font-headline italic font-bold text-sm tracking-tight bg-white border border-stone-200 text-stone-600 hover:text-[#CD0000] transition-all">AUDIO</button>
+<button class="px-6 py-2 rounded-full font-headline italic font-bold text-sm tracking-tight bg-white border border-stone-200 text-stone-600 hover:text-[#CD0000] transition-all">TRANSMISSION</button>
+<button class="px-6 py-2 rounded-full font-headline italic font-bold text-sm tracking-tight bg-white border border-stone-200 text-stone-600 hover:text-[#CD0000] transition-all">MONITORING</button>
+</div>
+<div class="relative group max-w-md w-full">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-stone-400 group-focus-within:text-[#CD0000] transition-colors">search</span>
+<input class="w-full pl-12 pr-6 py-3 bg-white border border-stone-200 focus:border-[#CD0000] focus:ring-0 font-body text-sm transition-all placeholder:text-stone-400" placeholder="Search system repository..." type="text"/>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 perspective-container">
+<!-- Product Cards with new color scheme -->
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-tech cinematic close-up of professional broadcast video switcher console" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkhO5o-1AwhvYcghGkM1lVyUHls962mDqgvrMKyPdmCmeMyPquTaGdu9MoL_vSEO3Z2z9M79RFIi27LFswHd5rE107u7f7K2GRuM5-mr2wIi_eExzTJ39NQC5I1l7aLKb2ZrkYHCcZc1oOyzsig61_T0_KKpXuesf3218xDf_LcqJ55AHGtrE_FI2TLEolcr_LbxAzRvNcjQrQpV_7SSiLqvPDW6rzF7jAaQqnbVpmgyNc8e-q3-eG9VILvc2Q19QReCaHDrF0b-E"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#CD0000] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Video</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">V-800HD MASTER</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Multi-format switcher for seamless 4K production environments with ultra-low latency.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$12,400.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="professional condenser microphone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGD2QhoSSsvgMgE6XjhrDMOodZLzyTjCNeSilzk-KscYnANs_N6fkMzYgrxQBOfhkwHgrHz6d7dLMTtw1-bfYU9QyG-e1yBGYDwJiguKJUYSSC_ZjXb5bQHfBpV1nJ3LKbA-g7YQg9bt8d0lfN30yhrya3WkxPaoInMONsGnYi73nmL4vmhXaVurz23WFQbAdjFEEOkwRcE0KExHhH4IpWGjO3EwStsEhm0IPjm2gxpZ7wzsHFm-gIClGu5CiWhsOZIzAGkAFNdDg"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Audio</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">AURUM-9 STUDIO</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Reference grade cardioid condenser microphone with custom-tuned gold-sputtered diaphragm.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$2,850.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="radio transmission tower" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz4UzPoyRiJIbeI_8Kg1-LR8yrTOhyYB4FU-PK67B69ZJBn1xqSzlaOSflunjYYf_2PueAO2iM5w9z9Qw4K6TpTE5k2SvHwOZczgyGz_sRZZ4gac3gR3A-XmJkJLsr7uZNt2fKjOZyOVIZDBNnfw8xxX_zgw13kq0OFyIpqqhZ3MSVvFWRpLwdm2YAOKTuaY6gjOcR30dq31YOy_z8gjh_7m9VHuKa26leCU8IEuFIBMaDzh057aNxWjPGVfaHicqbSXTdX38QxnE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Transmission</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">TX-9000 BEAM</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Long-range microwave link transmitter for point-to-point high-fidelity data broadcasting.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$45,000.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-resolution monitors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf-fM14Lhg-EwtT_66DSVpRscf03RuYa1DBG3HiirCsa8W3eN7Q10Iz2lHuOLLmMMniKlXj4Yw5cKGb_u9M0Ra2vOMZ8YDRojTihWWqfgMGsbEvTSlTYeTdtmEUzlBsnyynbF7nLXPLTtPx3-hxuzPByFDoK3QWynWRE1jkShO7zY6_ZrxWxIhAQGPR-JTkkOLfp0WH9vv0Gg1llUU1UrN1SlcnFmcBe4JcqwwHVRIqzTjGw0QOfwWjHDnFaar9oknTjrd8MuEwt0"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Monitoring</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">OLED-REF 32X</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Grade 1 reference monitor with 100% Rec. 2020 color space coverage and 2000 nits peak brightness.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$8,900.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinema camera lens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU21afGmcxOjCdpdJ-D5DFteo3w6XrnNRKCEPRfFcColCv0rK-7c8hIW1WY5rVgvj16cq-FTq-re7soGjwEPKm-0DQBOWyV8-yq8v6uTB1nSJN-bgq9vXYhew9jDfmOq83sVy3I3P15HRskdzZvqxY5-gPXX5alLPNKw--qthvhym7jDVDxM6X6lgjW_Od084r7KSZTuyRDeG0dcD7293vrxfz4IuIWzPID344hbpGC0N5vCOVsmtskqQ_WsKZoVM-9KZjV7cxWYo"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#CD0000] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Video</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">PRIME-Z CINEMA</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">8K Cinema camera body with global shutter and 16 stops of dynamic range for elite productions.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$24,100.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="audio mixing console" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCufFuAjxQlmyFv_CqtuhoEgEOjMIa2wbAatFC2NA25PdCCxvAjEOkZr3d5u3b5Sh7--5jPfXvLWWpdJzpTaRlz31oOVhaWhZlrG_q3w7ln2zt8fddQe6ZV5o9JujpJxnxhFhYm7qB84s2y19MbIspu8d4u_j9o-6WqgH1TDqAHQHcIoP4wyPNH4BKMSbftgYB6JXIPZLUo9Byp_yTnmPUi4qW6m37OBsWRkF3UHvh8FlX2kwIdKF7OhtRF00YaZ6eHH5ucghNk9R0"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Audio</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">NEXUS-D CONSOLE</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Fully digital 64-channel mixing surface with integrated DSP and redundant power supply.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$18,750.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="network visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT73pidEqqOfcEBYbY-K-r7BVxQpfwvg2KWrssnimsPb7fvUeJ-A-FT-uk5ZnXMHgHXjjL_OmkpydwFugTUAdSHthxY7noT-CmI_LM1yfBwSjXkOq7J2tPpo0K7ALlnkm4zcsjv_g4kh0dkjtxDs3DQZDBKSHyOBuP5mFhGg5vmfOiB5ZqmiTPvf8VANn04UfB38UKR8XqVmT-dVlEMey76mwRfVwROvsPPoxaju908cV7WWnhqWRp64sZT5Jk12mMD5l6WCbdP6Y"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Transmission</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">ORBIT-LINK V4</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Advanced satellite uplink modulator with adaptive coding and ultra-resilient signal lock.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$32,000.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="tilt-card bg-white rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border border-stone-200 flex flex-col group">
+<div class="aspect-video overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="broadcast waveform monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvDvoyvHLPnt9V5t_aJ5jsCCjTXGopH7dBYwNWB4alhnxCWTzb9Xp8FDHrBy_C66kLmyMJbjc-RKrQBTwbuEsyi4kS1U6B5cvBHP3qOyXCGbEw9j9ksC0EjC_8EIkruE_hMJHkyG4KCCPlVDt2viVk7kT5tonDxzIffTpxyRrkkL6aYhej5tslZppq5fSH2NxulHQ_hdmJWNuvNBOqcchjGBWrPRebqE9O0bxSXBOFP5gXVUlnHutvBBvk3rpM2fj445-4HhJONM0"/>
+<div class="absolute top-4 left-4">
+<span class="bg-[#8B004A] text-[10px] text-white font-headline italic font-bold tracking-widest px-3 py-1 rounded-sm uppercase">Monitoring</span>
+</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-black text-stone-900 mb-2 tracking-tight">SCOPE-MASTER PRO</h3>
+<p class="text-stone-500 text-sm mb-6 leading-relaxed">Real-time signal analysis tool with HDR waveform, vectorscope, and CIE gamut monitoring.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="font-headline text-3xl font-black text-[#CD0000] tracking-tighter">$5,400.00</div>
+<button class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-[#CD0000] hover:bg-[#CD0000] hover:text-white transition-all border border-stone-100">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-20 flex flex-col items-center gap-8">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-lg border border-stone-300 flex items-center justify-center text-stone-500 hover:border-[#CD0000] hover:text-[#CD0000] transition-all bg-white">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-lg bg-[#8B004A] text-white font-headline italic font-bold">1</button>
+<button class="w-12 h-12 rounded-lg bg-white border border-stone-200 text-stone-600 font-headline italic font-bold hover:text-[#CD0000]">2</button>
+<button class="w-12 h-12 rounded-lg bg-white border border-stone-200 text-stone-600 font-headline italic font-bold hover:text-[#CD0000]">3</button>
+<div class="w-12 h-12 flex items-center justify-center text-stone-400">...</div>
+<button class="w-12 h-12 rounded-lg bg-white border border-stone-200 text-stone-600 font-headline italic font-bold hover:text-[#CD0000]">12</button>
+</div>
+<button class="w-12 h-12 rounded-lg border border-stone-300 flex items-center justify-center text-stone-500 hover:border-[#CD0000] hover:text-[#CD0000] transition-all bg-white">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<button class="group flex flex-col items-center gap-2">
+<span class="font-headline italic font-bold text-xs uppercase tracking-widest text-[#CD0000]">Load Remaining Inventory</span>
+<span class="material-symbols-outlined animate-bounce text-[#CD0000]">keyboard_double_arrow_down</span>
+</button>
+</section>
+</main>
+<!-- Footer from COMPONENTS_9 -->
+<footer class="bg-[#EFEDE6] dark:bg-stone-950 w-full pt-16 pb-8 border-t border-stone-400/10">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 px-8 max-w-7xl mx-auto mb-16">
+<div class="flex flex-col gap-6 max-w-xs">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200">BROADCASTIX</div>
+<p class="font-['Manrope'] text-sm leading-relaxed text-stone-500">
+                    The premier curator of enterprise-grade broadcast hardware and data delivery systems. Engineering future-proof solutions for global networks.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-6">
+<h4 class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-800 font-bold">Company</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Our Mission</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Strategic Partners</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Newsroom</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-800 font-bold">Services</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">System Integration</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Satellite Uplink</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">24/7 Monitoring</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-800 font-bold">Support</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Technical Docs</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Client Portal</a></li>
+<li><a class="font-['Manrope'] text-sm text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Remote Assist</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-8 max-w-7xl mx-auto border-t border-stone-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500">© 2024 Broadcastix Media. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Terms of Service</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-xs text-stone-500 hover:text-[#CD0000] transition-all duration-300" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+</body></html>
